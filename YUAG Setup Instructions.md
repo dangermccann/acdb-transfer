@@ -44,15 +44,16 @@ Next we will launch a EC2 instance from this AMI.  When the instance starts up, 
 1. Wait for instance to start up.  You can manage the status from the Instances list.  
 2. When the instance is ready, locate the public IP address of the instance by selecting it in the list.  
 3. At this point if you navigate your web browser to the IP of the instance, you will see the login page for ACDB, but login attempts will fail.  
-4. SSH to the instance to start up the ACDB server.  Open your SSH terminal application of choice, and using your private key, start an SSH session with the instance as follows:
-ssh -i ./path/to/key.pem ubuntu@[ip address]
+4. SSH to the instance to start up the ACDB server.  Open your SSH terminal application of choice, and using your private key, start an SSH session with the instance as follows: `ssh -i ./path/to/key.pem ubuntu@[ip address]`
 
 5. Start the ACDB server as follows:  
+
+```
 cd acdb/acdb-server
 nohup npm start &
+```
 
-6. With the server running you should be able to use DCDB.  Open browser to:
-http://[ip address]/
+6. With the server running you should be able to use DCDB.  Open browser to: `http://[ip address]/`
 
 Log in and verify that all Lusoria, Items, images and other data is presented.  
 
